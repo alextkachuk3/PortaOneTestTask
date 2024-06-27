@@ -1,6 +1,7 @@
 #pragma once
 
-class CalculationStrategy {
+class Strategy 
+{
 public:
     virtual void start() = 0;
     virtual void processElement(int number) = 0;

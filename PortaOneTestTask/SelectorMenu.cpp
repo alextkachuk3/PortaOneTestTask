@@ -1,8 +1,8 @@
 #include "SelectorMenu.h"
 
-void SelectorMenu::selectAlgorithms()
+void SelectorMenu::selectAlgorithms(Context& context)
 {
-	std::vector<std::string> menuItems = { "Find Minimum", "Find Maximum", "Start" };
+	std::vector<std::string> menuItems = { "Find Minimum", "Find Maximum", "Find Median", "Start" };
 	std::vector<bool> selectedMenuItems(menuItems.size(), false);
 	int selectedItem = 0;
 	const int numItems = static_cast<int>(menuItems.size());
@@ -39,7 +39,18 @@ void SelectorMenu::selectAlgorithms()
 	{
 		if (selectedMenuItems[i])
 		{
-			std::cout << menuItems[i] << std::endl;
+			if (i == 0)
+			{
+				context.addStrategy(new MinElementStrategy());
+			}
+			if (i == 1)
+			{
+				context.addStrategy(new MaxElementStrategy());
+			}
+			if (i == 2)
+			{
+				context.addStrategy(new MedianStrategy());
+			}
 		}
 	}
 }
