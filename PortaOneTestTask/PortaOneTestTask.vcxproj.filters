@@ -21,9 +21,20 @@
     <ClCompile Include="SelectorMenu.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="SelectorMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="10m.txt" />
     <Text Include="m.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CalculationStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
