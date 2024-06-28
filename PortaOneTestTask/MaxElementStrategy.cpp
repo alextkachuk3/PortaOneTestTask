@@ -1,16 +1,6 @@
 #include "MaxElementStrategy.h"
 
-void MaxElementStrategy::start()
+void MaxElementStrategy::execute(std::vector<int>& sortedArray) const
 {
-	maxElement = std::numeric_limits<int>::min();
-}
-
-void MaxElementStrategy::processElement(int number)
-{
-	if (number > maxElement) maxElement = number;
-}
-
-void MaxElementStrategy::finish()
-{
-	std::cout << "Maximum element: " << maxElement << std::endl;
+	if (!sortedArray.empty()) std::cout << "Max element: " << sortedArray[sortedArray.size() - 1] << std::endl;
 }

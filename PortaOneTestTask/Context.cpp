@@ -1,5 +1,4 @@
 #include "Context.h"
-#include "MedianStrategy.h"
 
 void Context::addStrategy(Strategy* strategy)
 {
@@ -15,19 +14,20 @@ void Context::processFile(const std::string& filename)
 		return;
 	}
 
-	for (auto& strategy : strategies) strategy->start();
+	std::vector<int> array;
+	array.reserve(ARRAY_MAX_SIZE);
 
 	int number;
 	while (file >> number)
 	{
-		for (auto& strategy : strategies) strategy->processElement(number);
+		array.push_back(number);
 	}
+
+	std::sort(array.begin(), array.end());
 
 	for (auto& strategy : strategies)
 	{
-		if (auto medianStrategy = dynamic_cast<MedianStrategy*>(strategy)) medianStrategy->setFile(&file);
-
-		strategy->finish();
+		strategy->execute(array);
 	}
 
 	file.close();

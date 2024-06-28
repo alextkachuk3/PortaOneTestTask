@@ -1,10 +1,8 @@
 #pragma once
-
 #include <iostream>
 #include <string>
 #include <vector>
 #include <conio.h>
-
 #include "Context.h"
 #include "MinElementStrategy.h"
 #include "MaxElementStrategy.h"
