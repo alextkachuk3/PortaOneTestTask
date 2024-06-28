@@ -5,5 +5,5 @@
 class MinElementStrategy : public Strategy
 {
 public:
-    virtual void execute(std::vector<int>& sortedArray) const override;
+	virtual void execute(std::vector<int>& sortedArray) const override;
 };

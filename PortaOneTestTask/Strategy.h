@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 
-class Strategy 
+class Strategy
 {
 public:
-    virtual ~Strategy() = default;
-    virtual void execute(std::vector<int>& sortedArray) const = 0;
+	virtual ~Strategy() = default;
+	virtual void execute(std::vector<int>& sortedArray) const = 0;
 };

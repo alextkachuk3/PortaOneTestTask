@@ -18,5 +18,5 @@ constexpr int DOWN_KEY = 80;
 class SelectorMenu
 {
 public:
-	static void selectAlgorithms(Context& context);	
+	static void selectAlgorithms(Context& context);
 };

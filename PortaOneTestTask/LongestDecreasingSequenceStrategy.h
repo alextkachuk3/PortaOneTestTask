@@ -2,7 +2,7 @@
 #include <iostream>
 #include "IterableStrategy.h"
 
-class LongestDecreasingSequenceStrategy :  public IterableStrategy
+class LongestDecreasingSequenceStrategy : public IterableStrategy
 {
 public:
 	virtual void execute(std::vector<int>& sortedArray) const override;

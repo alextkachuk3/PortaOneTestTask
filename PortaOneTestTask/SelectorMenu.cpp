@@ -50,10 +50,8 @@ void SelectorMenu::selectAlgorithms(Context& context)
 		if (key == UP_KEY) selectedItem = (selectedItem - 1 + numItems) % numItems;
 		else if (key == DOWN_KEY) selectedItem = (selectedItem + 1) % numItems;
 		else if (key == ENTER_KEY)
-		{
 			if (selectedItem < numItems - 1) selectedMenuItems[selectedItem] = !selectedMenuItems[selectedItem];
 			else break;
-		}
 	}
 
 	for (int i = 0; i < numItems - 1; ++i)
