@@ -130,6 +130,7 @@
     <ClCompile Include="AverageStrategy.cpp" />
     <ClCompile Include="Context.cpp" />
     <ClCompile Include="IterableStrategy.cpp" />
+    <ClCompile Include="LongestDecreasingSequenceStrategy.cpp" />
     <ClCompile Include="LongestIncreasingSequenceStrategy.cpp" />
     <ClCompile Include="MaxElementStrategy.cpp" />
     <ClCompile Include="MedianStrategy.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="SelectorMenu.cpp" />
     <ClInclude Include="AverageStrategy.h" />
     <ClInclude Include="IterableStrategy.h" />
+    <ClInclude Include="LongestDecreasingSequenceStrategy.h" />
     <ClInclude Include="LongestIncreasingSequenceStrategy.h" />
     <ClInclude Include="MaxElementStrategy.h" />
     <ClInclude Include="MedianStrategy.h" />

@@ -1,14 +1,26 @@
 #include "SelectorMenu.h"
 
+enum MenuItemIndex
+{
+	FIND_MINIMUM,
+	FIND_MAXIMUM,
+	FIND_MEDIAN,
+	AVERAGE,
+	LONGEST_INCREASING_SEQUENCE,
+	LONGEST_DECREASING_SEQUENCE,
+	START
+};
+
 void SelectorMenu::selectAlgorithms(Context& context)
 {
-	std::vector<std::string> menuItems = 
-	{ 
+	std::vector<std::string> menuItems =
+	{
 		"Find Minimum",
 		"Find Maximum",
 		"Find Median",
 		"Average",
 		"Longest increasing sequence",
+		"Longest decreasing sequence",
 		"Start"
 	};
 
@@ -48,25 +60,26 @@ void SelectorMenu::selectAlgorithms(Context& context)
 	{
 		if (selectedMenuItems[i])
 		{
-			if (i == 0)
+			switch (i)
 			{
+			case FIND_MINIMUM:
 				context.addStrategy(new MinElementStrategy());
-			}
-			if (i == 1)
-			{
+				break;
+			case FIND_MAXIMUM:
 				context.addStrategy(new MaxElementStrategy());
-			}
-			if (i == 2)
-			{
+				break;
+			case FIND_MEDIAN:
 				context.addStrategy(new MedianStrategy());
-			}
-			if (i == 3)
-			{
+				break;
+			case AVERAGE:
 				context.addStrategy(new AverageStrategy());
-			}
-			if (i == 4)
-			{
+				break;
+			case LONGEST_INCREASING_SEQUENCE:
 				context.addStrategy(new LongestIncreasingSequenceStrategy());
+				break;
+			case LONGEST_DECREASING_SEQUENCE:
+				context.addStrategy(new LongestDecreasingSequenceStrategy());
+				break;
 			}
 		}
 	}

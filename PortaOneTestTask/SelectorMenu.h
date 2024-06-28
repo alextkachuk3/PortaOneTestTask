@@ -9,6 +9,7 @@
 #include "MedianStrategy.h"
 #include "AverageStrategy.h"
 #include "LongestIncreasingSequenceStrategy.h"
+#include "LongestDecreasingSequenceStrategy.h"
 
 constexpr int ENTER_KEY = 13;
 constexpr int UP_KEY = 72;
