@@ -3,6 +3,7 @@
 void Context::addStrategy(Strategy* strategy)
 {
 	strategies.push_back(strategy);
+	if (auto iterableStrategy = dynamic_cast<IterableStrategy*>(strategy)) iterableStrategies.push_back(iterableStrategy);
 }
 
 void Context::processFile(const std::string& filename)
@@ -21,6 +22,11 @@ void Context::processFile(const std::string& filename)
 	while (file >> number)
 	{
 		array.push_back(number);
+
+		for (auto& iterableStrategy : iterableStrategies)
+		{
+			iterableStrategy->processElement(number);
+		}
 	}
 
 	std::sort(array.begin(), array.end());
