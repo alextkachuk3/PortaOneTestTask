@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClCompile Include="AverageStrategy.cpp" />
     <ClCompile Include="Context.cpp" />
-    <ClCompile Include="IterableStrategy.cpp" />
     <ClCompile Include="LongestDecreasingSequenceStrategy.cpp" />
     <ClCompile Include="LongestIncreasingSequenceStrategy.cpp" />
     <ClCompile Include="MaxElementStrategy.cpp" />

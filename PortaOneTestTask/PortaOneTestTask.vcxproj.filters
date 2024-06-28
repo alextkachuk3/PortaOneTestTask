@@ -36,9 +36,6 @@
     <ClCompile Include="AverageStrategy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IterableStrategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LongestIncreasingSequenceStrategy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
