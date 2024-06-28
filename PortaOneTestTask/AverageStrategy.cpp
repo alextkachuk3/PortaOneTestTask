@@ -7,10 +7,7 @@ void AverageStrategy::execute(std::vector<int>& sortedArray) const
 	double average = 0.0;
 	double averageMultiplier = 1.0 / sortedArray.size();
 
-	for (auto& value : sortedArray)
-	{
-		average += value * averageMultiplier;
-	}
+	for (auto& value : sortedArray)	average += value * averageMultiplier;
 
-	std::cout << "Average: " << average << std::endl;
+	std::cout << "Average: " << std::fixed << std::setprecision(8) << average << std::endl;
 }

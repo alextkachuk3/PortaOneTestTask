@@ -14,5 +14,5 @@ void MedianStrategy::execute(std::vector<int>& sortedArray) const
 		median *= 0.5;
 	}
 
-	std::cout << "Median: " << std::fixed << std::setprecision(2) << median << std::endl;
+	std::cout << "Median: " << std::fixed << std::setprecision(1) << median << std::endl;
 }

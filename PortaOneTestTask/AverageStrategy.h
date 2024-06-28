@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 #include "Strategy.h"
 
 class AverageStrategy : public Strategy
